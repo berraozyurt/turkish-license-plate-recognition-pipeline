@@ -1,0 +1,15 @@
+{
+  "experiment": "yolo26n",
+  "split": "val",
+  "images": 525,
+  "objects": 984,
+  "precision": 0.906039,
+  "recall": 0.950555,
+  "map50": 0.971492,
+  "map50_95": 0.782454,
+  "preprocess_ms_per_image": 0.4866,
+  "inference_ms_per_image": 10.1043,
+  "postprocess_ms_per_image": 0.1695,
+  "imgsz": 640,
+  "batch": 4
+}

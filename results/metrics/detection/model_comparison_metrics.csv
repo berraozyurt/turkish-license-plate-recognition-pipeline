@@ -1,0 +1,2 @@
+experiment,split,images,objects,precision,recall,map50,map50_95,preprocess_ms_per_image,inference_ms_per_image,postprocess_ms_per_image,imgsz,batch
+yolo26n,val,525,984,0.906039,0.950555,0.971492,0.782454,0.4866,10.1043,0.1695,640,4
