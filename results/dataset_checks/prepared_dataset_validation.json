@@ -1,0 +1,50 @@
+{
+  "prepared_dataset": "Turkish license plate detection dataset",
+  "label_format": "YOLO bounding_box_detection",
+  "split_summaries": {
+    "train": {
+      "images": 2450,
+      "labels": 2450,
+      "objects": 4391,
+      "empty_label_files": 0,
+      "images_without_labels": 0,
+      "labels_without_images": 0,
+      "invalid_label_lines": 0
+    },
+    "valid": {
+      "images": 525,
+      "labels": 525,
+      "objects": 984,
+      "empty_label_files": 0,
+      "images_without_labels": 0,
+      "labels_without_images": 0,
+      "invalid_label_lines": 0
+    },
+    "test": {
+      "images": 525,
+      "labels": 525,
+      "objects": 945,
+      "empty_label_files": 1,
+      "images_without_labels": 0,
+      "labels_without_images": 0,
+      "invalid_label_lines": 0
+    }
+  },
+  "manifest_summary": {
+    "manifest_rows": 3500,
+    "source_groups": 3485,
+    "groups_across_multiple_splits": 0
+  },
+  "overall": {
+    "images": 3500,
+    "labels": 3500,
+    "objects": 6320,
+    "empty_label_files": 1,
+    "images_without_labels": 0,
+    "labels_without_images": 0,
+    "invalid_label_lines": 0,
+    "exact_duplicates_across_splits": 0,
+    "source_groups_across_multiple_splits": 0
+  },
+  "status": "valid_for_training"
+}

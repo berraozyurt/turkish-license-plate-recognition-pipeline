@@ -1,0 +1,60 @@
+{
+  "dataset": "License Plates of Vehicles in Turkey",
+  "task_used_in_project": "object_detection",
+  "class_names": [
+    "license plate"
+  ],
+  "source_annotation_types": [
+    "bounding_box",
+    "polygon"
+  ],
+  "conversion_plan": "Polygon annotations will be converted to bounding boxes for YOLO object detection training.",
+  "source_split_summary": {
+    "train": {
+      "images": 3150,
+      "labels": 3150,
+      "objects": 5811,
+      "bounding_box_annotations": 50,
+      "polygon_annotations": 5761,
+      "empty_label_files": 1,
+      "images_without_labels": 0,
+      "labels_without_images": 0,
+      "invalid_lines": 0
+    },
+    "valid": {
+      "images": 345,
+      "labels": 345,
+      "objects": 504,
+      "bounding_box_annotations": 57,
+      "polygon_annotations": 447,
+      "empty_label_files": 0,
+      "images_without_labels": 0,
+      "labels_without_images": 0,
+      "invalid_lines": 0
+    },
+    "test": {
+      "images": 5,
+      "labels": 5,
+      "objects": 5,
+      "bounding_box_annotations": 0,
+      "polygon_annotations": 5,
+      "empty_label_files": 0,
+      "images_without_labels": 0,
+      "labels_without_images": 0,
+      "invalid_lines": 0
+    }
+  },
+  "overall": {
+    "images": 3500,
+    "label_files": 3500,
+    "annotated_objects": 6320,
+    "bounding_box_annotations": 107,
+    "polygon_annotations": 6213,
+    "empty_label_files": 1,
+    "images_without_labels": 0,
+    "labels_without_images": 0,
+    "invalid_annotation_lines": 0,
+    "exact_duplicates_across_splits": 0
+  },
+  "status": "valid_for_conversion"
+}

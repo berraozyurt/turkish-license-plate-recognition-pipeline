@@ -1,0 +1,47 @@
+{
+  "source_dataset": "License Plates of Vehicles in Turkey",
+  "prepared_task": "license_plate_object_detection",
+  "class_names": [
+    "license plate"
+  ],
+  "random_seed": 42,
+  "split_ratio": {
+    "train": 0.7,
+    "valid": 0.15,
+    "test": 0.15
+  },
+  "conversion": {
+    "existing_bounding_boxes_preserved": true,
+    "polygon_annotations_converted_to_bounding_boxes": true
+  },
+  "splits": {
+    "train": {
+      "images": 2450,
+      "objects": 4391,
+      "existing_boxes": 70,
+      "converted_polygons": 4321,
+      "empty_label_files": 0
+    },
+    "valid": {
+      "images": 525,
+      "objects": 984,
+      "existing_boxes": 18,
+      "converted_polygons": 966,
+      "empty_label_files": 0
+    },
+    "test": {
+      "images": 525,
+      "objects": 945,
+      "existing_boxes": 19,
+      "converted_polygons": 926,
+      "empty_label_files": 1
+    }
+  },
+  "overall": {
+    "images": 3500,
+    "objects": 6320,
+    "existing_boxes": 107,
+    "converted_polygons": 6213,
+    "empty_label_files": 1
+  }
+}

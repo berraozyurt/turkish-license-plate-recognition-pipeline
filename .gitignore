@@ -1,0 +1,57 @@
+# Local datasets and privacy-sensitive data
+data/detection_dataset/
+data/ocr_dataset/
+data/private_samples/
+data/downloads/
+data/prepared_dataset/
+
+# Generated outputs that may contain readable plate information
+results/private/
+results/crops/
+results/raw_predictions/
+results/ocr_raw_outputs/
+
+# Model weights and training runs
+models/*.pt
+models/*.onnx
+models/*.engine
+runs/
+*.pt
+*.onnx
+*.engine
+
+# Images and videos are ignored by default for privacy.
+# Safe anonymized or synthetic examples can be added intentionally later.
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.mp4
+*.avi
+*.mov
+
+# Secrets and credentials
+.env
+*.env
+*.key
+*api_key*
+config.local.*
+secrets.*
+
+# Python cache and environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+*.rar
+*.7z
+
