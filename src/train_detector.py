@@ -72,9 +72,9 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        "--smoke-test",
+        "--full-train",
         action="store_true",
-        help="Run a short one-epoch training test on a small subset.",
+        help="Run the full training experiment instead of the default smoke test.",
     )
 
     parser.add_argument(
@@ -100,19 +100,22 @@ def validate_environment() -> None:
 
 
 def get_training_configuration(arguments) -> dict:
-    if arguments.smoke_test:
-        epochs = 1
-        fraction = 0.05
-        run_name = arguments.run_name or f"{arguments.model}_smoke_test"
-    else:
+    if arguments.full_train:
         epochs = arguments.epochs
         fraction = 1.0
         run_name = arguments.run_name or f"{arguments.model}_training"
+        is_smoke_test = False
+    else:
+        epochs = 1
+        fraction = 0.05
+        run_name = arguments.run_name or f"{arguments.model}_smoke_test"
+        is_smoke_test = True
 
     return {
         "epochs": epochs,
         "fraction": fraction,
         "run_name": run_name,
+        "is_smoke_test": is_smoke_test,
     }
 
 
@@ -140,7 +143,7 @@ def main() -> None:
     print(f"Training subset: {configuration['fraction']:.2f}")
     print(f"Run name:        {configuration['run_name']}")
     print(f"Output folder:   {PRIVATE_RUNS_DIR}")
-    print(f"Smoke test:      {arguments.smoke_test}\n")
+    print(f"Smoke test:      {configuration['is_smoke_test']}\n")
 
     model = YOLO(model_weights)
 
@@ -153,7 +156,7 @@ def main() -> None:
         workers=arguments.workers,
         project=str(PRIVATE_RUNS_DIR),
         name=configuration["run_name"],
-        exist_ok=arguments.smoke_test,
+        exist_ok=configuration["is_smoke_test"],
         optimizer="auto",
         seed=DEFAULT_SEED,
         deterministic=True,
