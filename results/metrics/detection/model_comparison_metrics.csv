@@ -1,3 +1,4 @@
 experiment,split,images,objects,precision,recall,map50,map50_95,preprocess_ms_per_image,inference_ms_per_image,postprocess_ms_per_image,imgsz,batch
 yolo26n,val,525,984,0.906039,0.950555,0.971492,0.782454,0.4866,10.1043,0.1695,640,4
 yolo11n,val,525,984,0.88721,0.947154,0.964185,0.762677,0.5053,10.4661,0.9255,640,4
+yolo26n,test,525,945,0.90456,0.942768,0.973518,0.780936,0.4948,9.9814,0.1884,640,4
