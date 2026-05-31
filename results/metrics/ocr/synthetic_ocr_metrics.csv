@@ -1,0 +1,2 @@
+samples,exact_match_accuracy,mean_character_accuracy,valid_format_rate,gpu_used
+300,0.963333,0.988889,0.966667,True

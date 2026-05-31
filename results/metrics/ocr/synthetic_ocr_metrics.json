@@ -1,0 +1,13 @@
+{
+  "task": "synthetic_turkish_plate_ocr",
+  "ocr_engine": "EasyOCR",
+  "language_setting": [
+    "en"
+  ],
+  "samples": 300,
+  "exact_match_accuracy": 0.963333,
+  "mean_character_accuracy": 0.988889,
+  "valid_format_rate": 0.966667,
+  "gpu_used": true,
+  "privacy_note": "OCR metrics are computed on synthetically generated plate images. No real plate identifiers are written to public result files."
+}
