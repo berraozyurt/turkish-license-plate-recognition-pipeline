@@ -1,0 +1,12 @@
+{
+  "task": "full_license_plate_detection_and_ocr_pipeline",
+  "detector": "YOLO26n",
+  "ocr_engine": "EasyOCR",
+  "images_processed": 30,
+  "detections": 44,
+  "images_with_detection": 28,
+  "mean_detections_per_image": 1.466667,
+  "valid_format_rate": 0.431818,
+  "gpu_used": true,
+  "privacy_note": "Readable OCR predictions from real plate crops are saved only under results/private and are excluded from Git. Public metrics contain aggregate counts only."
+}

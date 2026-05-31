@@ -1,0 +1,2 @@
+images_processed,detections,images_with_detection,mean_detections_per_image,valid_format_rate,gpu_used,detector,ocr_engine
+30,44,28,1.466667,0.431818,True,YOLO26n,EasyOCR
