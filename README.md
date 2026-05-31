@@ -276,41 +276,52 @@ python src/check_ocr_environment.py
 
 ## Usage
 
-- 1. Validate the downloaded detection dataset
+## Usage
+
+After downloading the detection dataset locally, first validate and prepare the YOLO-format dataset:
+
+```bash
 python src/check_dataset.py
-
-- 2. Prepare the YOLO detection dataset
 python src/prepare_detection_dataset.py
-
-- 3. Validate the prepared dataset
 python src/validate_prepared_dataset.py
+```
 
-- 4. Train a detector
-Short smoke test:
+To run a short training smoke test:
+
+```bash
 python src/train_detector.py --model yolo26n
+```
 
-Full training:
+To train the final detector:
 
+```bash
 python src/train_detector.py --model yolo26n --full-train --epochs 50
+```
 
-- 5. Evaluate a trained detector
+To evaluate a trained detector:
 
-Validation evaluation:
-
+```bash
 python src/evaluate_detector.py --experiment yolo26n --weights "results/private/training_runs/yolo26n_training/weights/best.pt"
+```
 
-Final test evaluation:
+The final test evaluation is protected with an explicit confirmation flag:
 
+```bash
 python src/evaluate_detector.py --experiment yolo26n --weights "results/private/training_runs/yolo26n_training/weights/best.pt" --split test --confirm-final-test
+```
 
+For the OCR component:
 
-- 6. Evaluate OCR on synthetic plates
-
+```bash
 python src/generate_synthetic_plates.py
 python src/evaluate_synthetic_ocr.py
+```
 
-- 7. Run the full local pipeline
+To run the local detection + OCR pipeline on sample test images:
+
+```bash
 python src/run_full_pipeline.py --limit 30 --conf 0.40
+```
 
 
 ## Privacy Notes
