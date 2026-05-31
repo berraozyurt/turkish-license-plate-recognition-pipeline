@@ -7,9 +7,9 @@
   "recall": 0.947154,
   "map50": 0.964185,
   "map50_95": 0.762677,
-  "preprocess_ms_per_image": 0.4269,
-  "inference_ms_per_image": 8.8878,
-  "postprocess_ms_per_image": 0.8781,
+  "preprocess_ms_per_image": 0.5053,
+  "inference_ms_per_image": 10.4661,
+  "postprocess_ms_per_image": 0.9255,
   "imgsz": 640,
   "batch": 4
 }
